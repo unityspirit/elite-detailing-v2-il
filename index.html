@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>דוגמת אתר — תבנית לעסק שלך</title>
+  <meta name="description" content="דוגמת אתר קולנועי. ראה איך העסק שלך ייראה באינטרנט.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========= CINEMATIC CANVAS BACKGROUND ========= -->
+  <canvas id="gl-canvas"></canvas>
+
+  <!-- ========= LOADER ========= -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-brand">⚡ החברה שלך</div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loaderBar"></div>
+      </div>
+      <div class="loader-info">
+        <span id="loaderPct">0</span>%
+      </div>
+      <div class="loader-caption" id="loaderCaption">Подготавливаем кинематографический опыт…</div>
+    </div>
+  </div>
+
+  <!-- ========= PROGRESS BAR (thin, bottom) ========= -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- ========= NAVBAR ========= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" id="navBrand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">החברה שלך</span>
+      </a>
+      <div class="nav-links" id="navLinksDesktop">
+        <a href="#services" class="nav-link" data-scroll="1">שירותים</a>
+        <a href="#process" class="nav-link" data-scroll="2">תהליך</a>
+        <a href="#results" class="nav-link" data-scroll="3">תוצאות</a>
+        <a href="#packages" class="nav-link" data-scroll="4">Пакеты</a>
+        <a href="#contact" class="nav-link" data-scroll="5">צור קשר</a>
+      </div>
+      <a href="tel:#" class="nav-cta">הטלפון שלך</a>
+      <button class="burger" id="navMenuBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========= MOBILE SCRIM + DRAWER ========= -->
+  <div class="nav-scrim" id="navScrim" hidden></div>
+  <div class="nav-drawer" id="navDrawer" hidden>
+    <button class="drawer-close" id="navDrawerClose">✕</button>
+    <a href="#services" class="nav-drawer-link" data-scroll="1">שירותים</a>
+    <a href="#process" class="nav-drawer-link" data-scroll="2">תהליך</a>
+    <a href="#results" class="nav-drawer-link" data-scroll="3">תוצאות</a>
+    <a href="#packages" class="nav-drawer-link" data-scroll="4">Пакеты</a>
+    <a href="#contact" class="nav-drawer-link" data-scroll="5">צור קשר</a>
+    <a href="tel:#" class="drawer-phone">📞 הטלפון שלך</a>
+  </div>
+
+  <!-- ========= UI LAYER ========= -->
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- ========= HERO ========= -->
+      <section class="page" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <div class="hero-badge reveal-3d">המותג שלך • הנישה שלך • ההתמחות שלך</div>
+          <h1 class="hero-title gsap-title reveal-3d">
+            כאן יהיה שם<br><span class="accent-text">החברה שלך</span>
+          </h1>
+          <p class="hero-desc reveal-3d">
+            כאן אתה יכול לכתוב את הסלוגן שלך, תיאור קצר או הצעה חמה — כל מה שתרצה!
+          </p>
+          <div class="hero-actions reveal-3d">
+            <a href="#contact" class="btn btn-primary" data-scroll="5">כפתור מותאם</a>
+            <a href="#services" class="btn btn-outline" data-scroll="1">הקישורים שלך</a>
+          </div>
+          <div class="hero-stats reveal-3d">
+            <div class="stat"><span class="stat-num counter" data-target="10">0</span><span class="stat-plus">+</span><span class="stat-label">שנות ניסיון</span></div>
+            <div class="stat"><span class="stat-num counter" data-target="3000">0</span><span class="stat-plus">+</span><span class="stat-label">Авто обслужено</span></div>
+            <div class="stat"><span class="stat-num counter" data-target="15">0</span><span class="stat-plus">+</span><span class="stat-label">Видов услуг</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= SERVICES ========= -->
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="badge reveal-3d">השירותים שלך</div>
+          <h2 class="section-title reveal-3d">Ваши <span class="accent-text">שירותים</span></h2>
+          <p class="section-desc reveal-3d">От глубокой полировки до бронирования плёнкой — защита и эстетика вашего автомобиля на высшем уровне.</p>
+
+          <div class="services-grid">
+            <div class="service-card reveal-3d">
+              <div class="card-icon">💎</div>
+              <h3>ליטוש שלדה</h3>
+              <p>ליטוש אגרסיבי ומשחזר. הסרת שריטות, הולוגרמות, כתמים. ברק מראה כמו מהמפעל.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🛡️</div>
+              <h3>ציפוי קרמי</h3>
+              <p>ננו-קרמיקה 9H+ עם אחריות עד 5 שנים. אפקט הידרופובי, הגנה מ-UV, כימיקלים ושריטות קלות.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🎞️</div>
+              <h3>סרט PPF</h3>
+              <p>סרט הגנה פוליאורתני לשלדה: הגנה מפגיעות, חצץ וונדליזם. מגן בלתי נראה לרכב שלך.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🧽</div>
+              <h3>ניקוי יסודי של הסלון</h3>
+              <p>ניקוי עומק של עור, בד ותקרה. טיפול באוזון, חיסול ריחות. הסלון כחדש.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🔧</div>
+              <h3>הכנה למכירה</h3>
+              <p>הכנה מקיפה של הרכב למכירה: ליטוש, ניקוי יסודי, תיקון פגמים, ציפוי קרמי.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🪟</div>
+              <h3>כהיית חלונות</h3>
+              <p>סרטים פרימיום עם הגנה מאולטרה-סגול. חיתוך מדויק לפי תבניות, אחריות ללא בועות.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= PROCESS ========= -->
+      <section class="page" data-index="2" id="process">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Здесь могут быть דוגמאות לעבודות שלך</div>
+          <h2 class="section-title reveal-3d">Примеры <span class="accent-text">ваших работ</span></h2>
+          <p class="section-desc reveal-3d">ספר על איך נראה שיתוף הפעולה שלך עם לקוחות, כמו בדוגמה למטה</p>
+
+          <div class="process-grid">
+            <div class="process-step reveal-3d">
+              <div class="step-num">01</div>
+              <h4>Осмотр и диагностика</h4>
+              <p>Детальная оценка состояния ЛКП, салона и элементов кузова. Толщиномер, фонарь, протокол дефектов.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">02</div>
+              <h4>Мойка и деконтаминация</h4>
+              <p>Бесконтактная мойка, глина, ирон-ремувер, дегтярка. Полная очистка поверхности перед работой.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">03</div>
+              <h4>Коррекция и полировка</h4>
+              <p>2–3 этапа полировки: грубая коррекция → антиголограммная → финиш. Контроль под LED-панелью.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">04</div>
+              <h4>Защитное покрытие</h4>
+              <p>Нанесение керамики / PPF-плёнки. Ламинарный бокс, контроль температуры, ИК-сушка для полимеризации.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= RESULTS ========= -->
+      <section class="page" data-index="3" id="results">
+        <div class="page-inner">
+          <div class="badge reveal-3d">עלינו</div>
+          <h2 class="section-title reveal-3d"><span class="accent-text">עלינו</span></h2>
+          <p class="section-desc reveal-3d">Расскажите о достижениях החברה שלך, поделитесь хорошими отзывами</p>
+
+          <div class="results-grid">
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="99">0</div>
+              <div class="result-suffix">%</div>
+              <div class="result-label">Клиентов возвращаются</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="3000">0</div>
+              <div class="result-suffix">+</div>
+              <div class="result-label">Автомобилей обработано</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="5">0</div>
+              <div class="result-suffix">лет</div>
+              <div class="result-label">אחריות на керамику</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num">24/7</div>
+              <div class="result-label">Онлайн-запись</div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal-3d">
+            <blockquote>
+              «החברה שלך помогла нам реализовать פרויקט мечты. Процесс был прозрачным — мы видели каждый этап. Результат превзошёл ожидания.»
+            </blockquote>
+            <div class="testimonial-author">
+              <span class="t-name">Иван П.</span>
+              <span class="t-role">Клиент «בע״מ Звёздный Путь»</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= PACKAGES ========= -->
+      <section class="page" data-index="4" id="packages">
+        <div class="page-inner">
+          <div class="badge reveal-3d">הצעות מיוחדות</div>
+          <h2 class="section-title reveal-3d"><span class="accent-text">מבצעים ותוכניות</span> עדכניים</h2>
+          <p class="section-desc reveal-3d">בחר חבילה או בנה תוכנית אישית — נמצא את הפתרון האופטימלי.</p>
+
+          <div class="packages-grid">
+            <div class="package-card reveal-3d">
+              <div class="package-tag">Базовый</div>
+              <h3>CLEAN</h3>
+              <div class="package-price">от 8 000 ₪</div>
+              <ul>
+                <li>Бесконтактная мойка</li>
+                <li>Чистка дисков и арок</li>
+                <li>ניקוי יסודי של הסלון</li>
+                <li>Кондиционер кожи</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline btn-sm" data-scroll="5">כפתור מותאם</a>
+            </div>
+            <div class="package-card package-featured reveal-3d">
+              <div class="package-tag">Популярный</div>
+              <h3>CERAMIC PRO</h3>
+              <div class="package-price">от 25 000 ₪</div>
+              <ul>
+                <li>Полировка 2-этапная</li>
+                <li>Керамика 9H+ (3 слоя)</li>
+                <li>ניקוי יסודי של הסלון</li>
+                <li>Гидрофоб на стёкла</li>
+                <li>אחריות 3 года</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-sm" data-scroll="5">כפתור מותאם</a>
+            </div>
+            <div class="package-card reveal-3d">
+              <div class="package-tag">Максимальный</div>
+              <h3>FULL ARMOR</h3>
+              <div class="package-price">от 80 000 ₪</div>
+              <ul>
+                <li>סרט PPF полный кузов</li>
+                <li>Керамика поверх плёнки</li>
+                <li>Полировка + химчистка</li>
+                <li>כהיית חלונות</li>
+                <li>אחריות 5 лет</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline btn-sm" data-scroll="5">כפתור מותאם</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= CONTACT ========= -->
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="badge reveal-3d">צור קשר</div>
+          <h2 class="section-title reveal-3d">Начнём <span class="accent-text">сотрудничество</span></h2>
+          <p class="section-desc reveal-3d">ציין כאן את פרטי הקשר, הכתובת ורשתות חברתיות שלך כדי שלקוחות יוכלו ליצור קשר</p>
+
+          <div class="contact-grid">
+            <form class="contact-form reveal-3d" id="contactForm" onsubmit="return false;">
+              <input type="text" id="formName" placeholder="השם שלך" required>
+              <input type="tel" id="formPhone" placeholder="טלפון / WhatsApp" required>
+              <select id="formService">
+                <option value="">הנישה שלך</option><option>רפואה / יופי</option><option>מסעדות / HoReCa</option><option>בנייה / שיפוצים</option><option>אדריכלות / עיצוב</option><option>IT / ייעוץ</option><option>רכב / דיטיילינג</option><option>כושר / ספורט</option><option>חינוך</option><option>תיירות / מלונות</option><option>ייצור</option><option>אחר</option>
+              </select>              <button type="submit" class="btn btn-primary" id="submitBtn">
+                <span id="submitText">להזמין אתר →</span>
+              </button>
+            </form>
+
+            <div class="contact-info reveal-3d">
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Адрес</strong>
+                  <p>הכתובת שלך</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                  <strong>טלפון</strong>
+                  <p><a href="tel:#">הטלפון שלך</a></p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">💬</span>
+                <div>
+                  <strong>מסנג׳רים</strong>
+                  <div class="social-links">
+                    <a href="#" class="social-btn">WhatsApp</a>
+                    <a href="#" class="social-btn">Telegram</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                  </div>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">🕐</span>
+                <div>
+                  <strong>Время работы</strong>
+                  <p>Пн–Сб: 9:00 – 20:00</p>
+                  <p>Вс: по записи</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:32px"><a href="https://unityspirit.github.io/global-plus-il/#page-4" class="btn btn-outline" style="font-size:16px;padding:14px 40px">חזרה לעמוד הראשי</a></div>`n      <footer class="footer">
+          <p>© 2026 החברה שלך</p>
+        </footer>
+      </section>
+
+    </div><!-- /.stage -->
+  </div><!-- /#ui-layer -->
+
+  <!-- ========= CURSOR GLOW ========= -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
