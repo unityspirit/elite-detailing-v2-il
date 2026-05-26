@@ -4,7 +4,7 @@
 /* ── Constants ──────────────────────────── */
 const TOTAL_FRAMES = 900;
 const PAGE_COUNT = 6;
-const LERP = 0.08;
+const LERP = 0.02;
 const CONCURRENCY = 48;
 
 const isMobile = innerWidth < 768;
